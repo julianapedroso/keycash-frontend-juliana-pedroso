@@ -1,0 +1,27 @@
+@import './global.scss';
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700;900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  overflow: auto;
+  font-size: 1rem;
+  font-family: 'Nunito Sans', sans-serif;
+}
+
+svg {
+  & > path {
+    stroke: var(--color-primary);
+  }
+
+  & > rect {
+    fill: var(--color-primary);
+  }
+}
