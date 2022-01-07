@@ -1,11 +1,12 @@
 import React from 'react';
-import { Header, InfoCard } from './components';
+import { Header, InfoCard, Footer } from './components';
 
 const App = () => {
   return (
     <div>
       <Header />
       <InfoCard />
+      <Footer />
     </div>
   );
 };
