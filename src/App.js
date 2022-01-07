@@ -1,12 +1,11 @@
 import React from 'react';
-import { Header, InfoCard, Footer } from './components';
+// Components
+import {Home} from './pages';
 
 const App = () => {
   return (
     <div>
-      <Header />
-      <InfoCard />
-      <Footer />
+      <Home />
     </div>
   );
 };

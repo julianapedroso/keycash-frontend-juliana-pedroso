@@ -4,7 +4,7 @@
   line-height: var(--line-height);
   max-width: 50%;
   width: 50%;
-  height: 20rem;
+  height: auto;
   margin: 5%;
 
   .card__cover {
@@ -16,9 +16,13 @@
   .card__info {
     padding: 4% 5%;
 
-    & p:first-child {
+    & span {
       font-size: 0.8rem;
       font-weight: normal;
+    }
+
+    & p {
+      font-size: 0.9rem;
     }
 
     & > h6 {
@@ -28,18 +32,30 @@
   }
 
   .card__scale {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    justify-content: center;
     align-items: center;
-    gap: 2.5rem;
 
     & .card__info-ruler::before {
       content: url("../../assets/icons/ruler.svg");
-      margin-right: .5rem;
+      margin-right: 0.5rem;
     }
 
     & .card__info-bed::before {
       content: url("../../assets/icons/bed.svg");
-      margin-right: .5rem;
+      margin-right: 0.5rem;
+    }
+
+    & .card__info-parking::before {
+      content: url("../../assets/icons/car.svg");
+      margin-right: 0.5rem;
+    }
+
+    & .card__info-bathroom::before {
+      content: url("../../assets/icons/bathroom.svg");
+      margin-right: 0.5rem;
     }
   }
 

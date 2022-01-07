@@ -1,26 +1,54 @@
 import React from 'react';
 import './styles.scss';
-// Assets
-import Cover from '../../assets/images/cover-ex.jpg';
+import PropTypes from 'prop-types';
 
-const InfoCard = () => {
+const InfoCard = (props) => {
+  const {
+    title,
+    image,
+    address1,
+    address2,
+    area,
+    bedroom,
+    parking,
+    bathroom,
+    price,
+  } = props;
+
   return (
     <main className="InfoCard">
       <article className="card">
-        <img className="card__cover" src={Cover} alt="" />
+        <img className="card__cover" src={image} alt="" />
         <section className="card__info">
-          <p>Apartamento</p>
-          <h5>Rua da Consolação,</h5>
-          <h6>Consolação - SP</h6>
+          <span>{title}</span>
+          <h5>{address1}</h5>
+          <h6>{address2}</h6>
           <article className="card__scale">
-            <p className="card__info-ruler">45m²</p> 
-            <p className="card__info-bed">2 quartos</p>
+            <p className="card__info-ruler">{area} m²</p>
+            <p className="card__info-bed">{bedroom} quartos</p>
+            <p className="card__info-parking">{parking} vagas</p>
+            <p className="card__info-bathroom">{bathroom} banheiros</p>
           </article>
-          <h3 className="card__info-price">Total R$ 2.387</h3>
+          <h3 className="card__info-price">R$ {price}</h3>
         </section>
       </article>
     </main>
   );
+};
+
+InfoCard.PropTypes = {
+  image: PropTypes.array,
+  addess1: PropTypes.string.isRequired,
+  address2: PropTypes.string.isRequired,
+  area: PropTypes.number.isRequired,
+  bedroom: PropTypes.number.isRequired,
+  parking: PropTypes.number.isRequired,
+  bathroom: PropTypes.number.isRequired,
+  price: PropTypes.number.isRequired,
+};
+
+InfoCard.defaultProps = {
+  title: 'Conheça o imóvel',
 };
 
 export default InfoCard;
