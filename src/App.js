@@ -1,11 +1,11 @@
 import React from 'react';
-import './theme/index.scss';
-import { Header } from './components';
+import { Header, InfoCard } from './components';
 
 const App = () => {
   return (
     <div>
       <Header />
+      <InfoCard />
     </div>
   );
 };

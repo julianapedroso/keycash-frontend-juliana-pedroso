@@ -1,0 +1,52 @@
+.InfoCard {
+  border-radius: 8px;
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.16);
+  line-height: var(--line-height);
+  max-width: 50%;
+  width: 50%;
+  height: 20rem;
+  margin: 5%;
+
+  .card__cover {
+    border-radius: 8px 8px 0 0;
+    max-width: 100%;
+    width: 100%;
+  }
+
+  .card__info {
+    padding: 4% 5%;
+
+    & p:first-child {
+      font-size: 0.8rem;
+      font-weight: normal;
+    }
+
+    & > h6 {
+      font-size: 0.7rem;
+      font-weight: normal;
+    }
+  }
+
+  .card__scale {
+    display: flex;
+    align-items: center;
+    gap: 2.5rem;
+
+    & .card__info-ruler::before {
+      content: url("../../assets/icons/ruler.svg");
+      margin-right: .5rem;
+    }
+
+    & .card__info-bed::before {
+      content: url("../../assets/icons/bed.svg");
+      margin-right: .5rem;
+    }
+  }
+
+  .card__info-price {
+    color: var(--color-primary);
+    font-size: 1rem;
+    font-weight: bold;
+    margin: 0.3rem 0;
+  }
+}
