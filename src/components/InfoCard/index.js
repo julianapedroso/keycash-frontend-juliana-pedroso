@@ -36,10 +36,10 @@ const InfoCard = (props) => {
   );
 };
 
-InfoCard.PropTypes = {
+InfoCard.propTypes = {
   image: PropTypes.array,
-  addess1: PropTypes.string.isRequired,
-  address2: PropTypes.string.isRequired,
+  addess1: PropTypes.string,
+  address2: PropTypes.string,
   area: PropTypes.number.isRequired,
   bedroom: PropTypes.number.isRequired,
   parking: PropTypes.number.isRequired,

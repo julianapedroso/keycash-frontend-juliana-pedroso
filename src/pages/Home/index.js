@@ -41,9 +41,8 @@ const Home = () => {
               price,
             } = property;
             return (
-              <div className="home__main-item">
+              <div className="home__main-item" key={id}>
                 <InfoCard
-                  key={id}
                   image={images}
                   address1={address.formattedAddress}
                   area={usableArea}
