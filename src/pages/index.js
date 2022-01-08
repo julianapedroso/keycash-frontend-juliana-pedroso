@@ -1,5 +1,7 @@
-import Home from "./Home";
+import Home from './Home';
+import PropertyDetails from './ PropertyDetails';
 
-export {
-  Home,
-}
+export { 
+  Home, 
+  PropertyDetails,  
+};

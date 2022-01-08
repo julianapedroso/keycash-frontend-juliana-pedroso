@@ -1,12 +1,12 @@
 import React from 'react';
 // Components
-import { Home } from './pages';
+import Routes from './router/routes';
 
 const App = () => {
   return (
-    <div>
-      <Home />
-    </div>
+    <>
+      <Routes />
+    </>
   );
 };
 
