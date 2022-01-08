@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
+import { Link } from 'react-router-dom';
 import './styles.scss';
 import { BASE_URL } from '../../providers/constants';
 // Components
@@ -16,7 +17,8 @@ const Home = () => {
     await axios
       .get(`${BASE_URL}`)
       .then((res) => {
-        setPropertys(res.data);
+        const filtered = res.data.filter(item => item.publish !== false);
+        setPropertys(filtered);
       })
       .catch((err) => {
         console.log(err);
@@ -54,15 +56,17 @@ const Home = () => {
             } = property;
             return (
               <article className="home__main-item" key={id}>
-                <InfoCard
-                  image={images}
-                  address1={address.formattedAddress}
-                  area={usableArea}
-                  bedroom={bedrooms}
-                  parking={parkingSpaces}
-                  bathroom={bathrooms}
-                  price={price}
-                />
+                <Link to={`/${id}`}>
+                  <InfoCard
+                    image={images}
+                    address1={address.formattedAddress}
+                    area={usableArea}
+                    bedroom={bedrooms}
+                    parking={parkingSpaces}
+                    bathroom={bathrooms}
+                    price={price}
+                  />
+                </Link>
               </article>
             );
           })}
