@@ -3,7 +3,7 @@ import axios from 'axios';
 import './styles.scss';
 import { BASE_URL } from '../../providers/constants';
 // Components
-import { Header, InfoCard, Footer } from '../../components';
+import { Header, Filter, InfoCard, Footer } from '../../components';
 
 const Home = () => {
   const [propertys, setPropertys] = useState([]);
@@ -12,11 +12,10 @@ const Home = () => {
     getPropertys();
   }, []);
 
-  const getPropertys = () => {
-    axios
+  const getPropertys = async () => {
+    await axios
       .get(`${BASE_URL}`)
       .then((res) => {
-        console.log(res.data);
         setPropertys(res.data);
       })
       .catch((err) => {
@@ -27,6 +26,19 @@ const Home = () => {
   return (
     <>
       <Header />
+      <section className="Home">
+        <h1 className="home__title">Imóveis disponíveis</h1>
+        <p className="home__description">
+          Quando o assunto é imóvel, a{' '}
+          <span className="home__description-highlight">Keycash</span> oferece
+          as melhores soluções.
+        </p>
+        <p className="home__description">
+          Confira os principais imóveis recomendados para você.
+        </p>
+      </section>
+
+      <Filter />
       <main className="Home">
         <section className="home__main-content home__carousel">
           {propertys.map((property) => {
@@ -41,7 +53,7 @@ const Home = () => {
               price,
             } = property;
             return (
-              <div className="home__main-item" key={id}>
+              <article className="home__main-item" key={id}>
                 <InfoCard
                   image={images}
                   address1={address.formattedAddress}
@@ -51,7 +63,7 @@ const Home = () => {
                   bathroom={bathrooms}
                   price={price}
                 />
-              </div>
+              </article>
             );
           })}
         </section>
