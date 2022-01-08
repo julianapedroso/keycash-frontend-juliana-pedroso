@@ -17,10 +17,9 @@ const Home = () => {
     await axios
       .get(`${BASE_URL}`)
       .then((res) => {
-        const filtered = res.data.filter(item => item.publish !== false);
+        const filtered = res.data.filter((item) => item.publish !== false);
         const sorted = filtered.sort((a, b) => a.price - b.price);
         setPropertys(sorted);
-    
       })
       .catch((err) => {
         console.log(err);
@@ -63,9 +62,21 @@ const Home = () => {
                     image={images}
                     address1={address.formattedAddress}
                     area={usableArea}
-                    bedroom={bedrooms}
-                    parking={parkingSpaces}
-                    bathroom={bathrooms}
+                    bedroom={
+                      bedrooms === 1
+                        ? `${bedrooms} quarto`
+                        : `${bedrooms} quartos`
+                    }
+                    parking={
+                      parkingSpaces === 1
+                        ? `${parkingSpaces} vaga`
+                        : `${parkingSpaces} vagas`
+                    }
+                    bathroom={
+                      bathrooms === 1
+                        ? `${bathrooms} banheiro`
+                        : `${bathrooms} banheiros`
+                    }
                     price={price}
                   />
                 </Link>
