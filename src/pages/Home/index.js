@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
+import './styles.scss';
 import { BASE_URL } from '../../providers/constants';
 // Components
 import { Header, InfoCard, Footer } from '../../components';
@@ -24,26 +25,40 @@ const Home = () => {
   };
 
   return (
-    <main className="Home">
+    <>
       <Header />
-      <section className="home__main-content">
-        {propertys.map((property) => {
-          return (
-            <InfoCard
-              key={property.id}
-              image={property.images}
-              address1={property.address.formattedAddress}
-              area={property.usableArea}
-              bedroom={property.bedrooms}
-              parking={property.parkingSpaces}
-              bathroom={property.bathrooms}
-              price={property.price}
-            />
-          );
-        })}
-      </section>
+      <main className="Home">
+        <section className="home__main-content home__carousel">
+          {propertys.map((property) => {
+            const {
+              id,
+              images,
+              address,
+              usableArea,
+              bedrooms,
+              parkingSpaces,
+              bathrooms,
+              price,
+            } = property;
+            return (
+              <div className="home__main-item">
+                <InfoCard
+                  key={id}
+                  image={images}
+                  address1={address.formattedAddress}
+                  area={usableArea}
+                  bedroom={bedrooms}
+                  parking={parkingSpaces}
+                  bathroom={bathrooms}
+                  price={price}
+                />
+              </div>
+            );
+          })}
+        </section>
+      </main>
       <Footer />
-    </main>
+    </>
   );
 };
 

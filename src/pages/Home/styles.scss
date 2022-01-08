@@ -1,0 +1,16 @@
+.Home {
+  .home__main-content {
+    max-width: 100vw;
+  }
+
+  .home__carousel {
+    display: flex;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+  }
+
+  .home__main-item {
+    max-width: 60%;
+    flex: none;
+  }
+}

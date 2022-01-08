@@ -18,7 +18,7 @@ const InfoCard = (props) => {
   return (
     <main className="InfoCard">
       <article className="card">
-        <img className="card__cover" src={image} alt="" />
+        <img className="card__cover" src={image} alt="Property cover" />
         <section className="card__info">
           <span>{title}</span>
           <h5>{address1}</h5>
