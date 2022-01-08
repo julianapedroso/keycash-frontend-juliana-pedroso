@@ -1,0 +1,36 @@
+.PropertyDetails {
+  
+  .property__cover {
+    max-width: 100%;
+  }
+
+  .property__info {
+    padding: 5%;
+
+    & > h5 {
+      font-size: 1.5rem;
+      padding: 5% 0;
+    }
+  }
+
+  .property__grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: center;
+    align-items: center;
+    row-gap: 1rem;
+    font-size: 1.3rem;
+    padding-bottom: 15%;
+
+    & .property__area::before {
+      background: url("../../assets/icons/ruler.svg");
+      margin-right: 0.5rem;
+    }
+  }
+  
+  .property__price-highlight {
+    color: var(--color-primary);
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+}

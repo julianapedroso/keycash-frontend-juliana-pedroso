@@ -3,7 +3,7 @@ export const goToHomePage = (history) => {
 };
 
 export const goToPropertyDetailsPage = (history, id) => {
-  history.push(`/details/${id}`);
+  history.push(`/${id}`);
 };
 
 export const goToBack = (history) => {

@@ -10,7 +10,7 @@ const InfoCard = (props) => {
     address2,
     area,
     bedroom,
-    parking,
+    parking, 
     bathroom,
     price,
   } = props;
@@ -25,9 +25,9 @@ const InfoCard = (props) => {
           <h6>{address2}</h6>
           <article className="card__scale">
             <p className="card__info-ruler">{area} m²</p>
-            <p className="card__info-bed">{bedroom} quartos</p>
-            <p className="card__info-parking">{parking} vagas</p>
-            <p className="card__info-bathroom">{bathroom} banheiros</p>
+            <p className="card__info-bed">{bedroom}</p>
+            <p className="card__info-parking">{parking}</p>
+            <p className="card__info-bathroom">{bathroom}</p>
           </article>
           <h3 className="card__info-price">R$ {price}</h3>
         </section>
