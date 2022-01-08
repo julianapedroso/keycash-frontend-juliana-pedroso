@@ -18,7 +18,9 @@ const Home = () => {
       .get(`${BASE_URL}`)
       .then((res) => {
         const filtered = res.data.filter(item => item.publish !== false);
-        setPropertys(filtered);
+        const sorted = filtered.sort((a, b) => a.price - b.price);
+        setPropertys(sorted);
+    
       })
       .catch((err) => {
         console.log(err);
