@@ -1,0 +1,47 @@
+.Filter {
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+  padding: 5%;
+
+  & input {
+    padding: 3%;
+    margin: 0.2rem 0;
+  }
+
+  & select {
+    padding: 5%;
+    margin: 0.2rem 0;
+  }
+
+  .filter__address {
+    flex-grow: 0;
+    max-width: 100%;
+    flex-basis: 100%;
+
+    & input {
+      width: 100%;
+    }
+  }
+
+  .filter__parking, .filter__bathroom {
+    flex-grow: 0;
+    max-width: 50%;
+    flex-basis: 50%;
+
+    & select {
+      width: 100%;
+    }
+
+  }
+
+  .filter__bedroom, .filter__price {
+    flex-grow: 0;
+    max-width: 50%;
+    flex-basis: 50%;
+
+    & select {
+      width: 100%;
+    }
+  }
+}

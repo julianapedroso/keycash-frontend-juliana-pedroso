@@ -1,4 +1,21 @@
 .Home {
+  .home__title {
+    padding: 5%;
+  }
+
+  .home__description {
+    padding: 0% 5%;
+
+    & .home__description-highlight {
+      color: var(--color-primary);
+      font-weight: bold;
+    }
+  }
+
+  & p:last-child {
+    padding-top: 2%;
+  }
+
   .home__main-content {
     max-width: 100vw;
   }
