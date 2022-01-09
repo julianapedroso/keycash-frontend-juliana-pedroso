@@ -3,6 +3,7 @@ import './styles.scss';
 // Assets
 import Logo from '../../assets/images/logo-keycash.svg';
 import Cover from '../../assets/images/cover.svg';
+import CoverFull from '../../assets/images/cover-desktop.svg';
 
 const Header = () => {
   return (
@@ -12,6 +13,11 @@ const Header = () => {
       </section>
       <section className="header__cover">
         <img src={Cover} alt="Cover house" />
+        <img
+          className="header__cover-desktop"
+          src={CoverFull}
+          alt="Mix cover house"
+        />
       </section>
     </header>
   );

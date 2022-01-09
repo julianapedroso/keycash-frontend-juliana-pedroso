@@ -1,5 +1,4 @@
 .Header {
-  // background: red;
   max-width: 100%;
   max-height: 6.12%;
 
@@ -9,9 +8,39 @@
     align-items: center;
     padding: 5%;
 
+    @media (min-width: 1800px) and (max-width: 1920px) {
+      padding: 2% 5%;
+    }
+
+    @media (max-width: 1024px), (max-width: 768px), (max-width: 1440px) {
+      padding: 2% 5%;
+    }
+
+    @media (max-width: 320px), (max-width: 375px), (max-width: 425px) {
+      padding: 5%;
+    }
+
+    & img {
+      @media (min-width: 1800px) and (max-width: 1920px), (max-width: 1440px) {
+        width: 10%;
+      }
+
+      @media (max-width: 1024px), (max-width: 768px) {
+        width: 20%;
+      }
+
+      @media (max-width: 320px), (max-width: 375px), (max-width: 425px) {
+        width: 30%;
+      }
+    }
+
     &::after {
-      content: url('../../assets/icons/menu-sharp.svg');
+      content: url("../../assets/icons/menu-sharp.svg");
       cursor: pointer;
+
+      @media (min-width: 1800px) and (max-width: 1920px), (max-width: 1440px), (max-width: 1024px), (max-width: 768px) {
+        display: none;
+      }
     }
   }
 
@@ -19,8 +48,28 @@
     img {
       max-width: 100%;
       width: 100%;
+
+      @media (min-width: 1800px) and (max-width: 1920px), (max-width: 1024px), (max-width: 1440px) {
+        display: none;
+      }
+
+      @media (max-width: 320px), (max-width: 375px), (max-width: 425px) {
+        display: block;
+      }
     }
-    
+
+    .header__cover-desktop {
+      display: none;
+
+      @media (min-width: 1800px) and (max-width: 1920px), (max-width: 1024px), (max-width: 1440px) {
+        display: block;
+        max-width: 100%;
+        width: 100%;
+      }
+
+      @media (max-width: 320px), (max-width: 375px), (max-width: 425px) {
+        display: none;
+      }
+    }
   }
-  
 }
