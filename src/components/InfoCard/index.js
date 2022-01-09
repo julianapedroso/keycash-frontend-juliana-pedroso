@@ -29,7 +29,7 @@ const InfoCard = (props) => {
             <p className="card__info-parking">{parking}</p>
             <p className="card__info-bathroom">{bathroom}</p>
           </article>
-          <h3 className="card__info-price">R$ {price}</h3>
+          <h3 className="card__info-price">R$ {price.toLocaleString('pt-br', {minimumFractionDigits: 2})}</h3>
         </section>
       </article>
     </main>
@@ -41,9 +41,9 @@ InfoCard.propTypes = {
   addess1: PropTypes.string,
   address2: PropTypes.string,
   area: PropTypes.number.isRequired,
-  bedroom: PropTypes.number.isRequired,
-  parking: PropTypes.number.isRequired,
-  bathroom: PropTypes.number.isRequired,
+  bedroom: PropTypes.string.isRequired,
+  parking: PropTypes.string.isRequired,
+  bathroom: PropTypes.string.isRequired,
   price: PropTypes.number.isRequired,
 };
 
