@@ -2,8 +2,9 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import './styles.scss';
 import { BASE_URL } from '../../providers/constants';
-import { useParams } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 // Assets
+import IArrowBack from '../../assets/icons/arrow-back.svg';
 import IArea from '../../assets/icons/ruler.svg';
 import IBedroom from '../../assets/icons/bed.svg';
 import ICar from '../../assets/icons/car.svg';
@@ -46,7 +47,15 @@ const PropertyDetails = () => {
           return (
             <main className="PropertyDetails" key={id}>
               <article className="property">
-                {/* <button id="back__home" /> */}
+                <Link to={'/'}>
+                  <button id="back__home">
+                    <img
+                      className="arrow__back"
+                      src={IArrowBack}
+                      alt="Arrow back icon"
+                    />
+                  </button>
+                </Link>
                 <img
                   className="property__cover"
                   src={images}

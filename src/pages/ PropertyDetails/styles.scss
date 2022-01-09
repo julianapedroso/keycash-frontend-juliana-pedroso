@@ -3,6 +3,17 @@
     max-width: 100%;
   }
 
+  #back__home {
+    border: none;
+    background: transparent;
+    padding: 5%;
+    position: absolute;
+
+    & .arrow__back {
+      width: 150%;
+    }
+  }
+
   .property__info {
     padding: 5%;
 
