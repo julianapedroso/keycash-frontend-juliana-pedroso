@@ -1,4 +1,8 @@
 .Home {
+  #router__link {
+    text-decoration: none;
+    color: var(--color-secondary);
+  }
 
   .home__title {
     padding: 5%;
