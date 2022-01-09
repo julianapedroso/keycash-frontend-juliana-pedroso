@@ -21,10 +21,6 @@ body {
 }
 
 svg {
-  & > path {
-    stroke: var(--color-primary);
-  }
-
   & > rect {
     fill: var(--color-primary);
   }

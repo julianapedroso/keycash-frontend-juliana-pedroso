@@ -6,12 +6,21 @@
   #back__home {
     border: none;
     background: transparent;
+    top: 0;
     padding: 5%;
     position: absolute;
 
     & .arrow__back {
       width: 150%;
     }
+  }
+
+  ._3WRGR svg {
+    display: none;
+  }
+
+  ._lhmht, ._dZ8C- {
+    display: none;
   }
 
   .property__info {
