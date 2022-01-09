@@ -3,8 +3,11 @@ import axios from 'axios';
 import './styles.scss';
 import { BASE_URL } from '../../providers/constants';
 import { useParams } from 'react-router-dom';
-// Components
-// import {Footer} from '../../components';
+// Assets
+import IArea from '../../assets/icons/ruler.svg';
+import IBedroom from '../../assets/icons/bed.svg';
+import ICar from '../../assets/icons/car.svg';
+import IBath from '../../assets/icons/bathroom.svg';
 
 const PropertyDetails = () => {
   const [propertyDetails, setPropertyDetails] = useState([]);
@@ -27,7 +30,7 @@ const PropertyDetails = () => {
   };
 
   return (
-    <section key={id}>
+    <section>
       {propertyDetails
         .filter((list) => list.id === id)
         .map((list) => {
@@ -41,7 +44,7 @@ const PropertyDetails = () => {
             price,
           } = list;
           return (
-            <main className="PropertyDetails">
+            <main className="PropertyDetails" key={id}>
               <article className="property">
                 {/* <button id="back__home" /> */}
                 <img
@@ -51,25 +54,59 @@ const PropertyDetails = () => {
                 />
                 <section className="property__info">
                   <h5>{address.formattedAddress}</h5>
+                  <p className="property__description">
+                    Confira as informações deste imóvel e aproveite para visitar
+                    a galeria de fotos.
+                  </p>
                   <section className="property__grid">
-                    <p className="property__area">{usableArea}m²</p>
-                    <p className="property__bedrooms">
-                      {bedrooms === 1
-                        ? `${bedrooms} quarto`
-                        : `${bedrooms} quartos`}
-                    </p>
-                    <p className="property__parking">
-                      {parkingSpaces === 1
-                        ? `${parkingSpaces} vaga`
-                        : `${parkingSpaces} vagas`}
-                    </p>
-                    <p className="property__bathrooms">
-                      {bathrooms === 1
-                        ? `${bathrooms} banheiro`
-                        : `${bathrooms} banheiros`}
-                    </p>
+                    <div className="property__flex">
+                      <img src={IArea} alt="Ruler icon" />
+                      <p className="property__area">{usableArea}m²</p>
+                    </div>
+                    <div className="property__flex">
+                      <img src={IBedroom} alt="Bed icon" />
+                      <p className="property__bedrooms">
+                        {bedrooms === 1
+                          ? `${bedrooms} quarto`
+                          : `${bedrooms} quartos`}
+                      </p>
+                    </div>
+                    <div className="property__flex">
+                      <img src={ICar} alt="Car icon" />
+                      <p className="property__parking">
+                        {parkingSpaces === 1
+                          ? `${parkingSpaces} vaga`
+                          : `${parkingSpaces} vagas`}
+                      </p>
+                    </div>
+                    <div className="property__flex">
+                      <img src={IBath} alt="Bath icon" />
+                      <p className="property__bathrooms">
+                        {bathrooms === 1
+                          ? `${bathrooms} banheiro`
+                          : `${bathrooms} banheiros`}
+                      </p>
+                    </div>
                   </section>
-                  <p className="property__price-highlight">R$ {price}</p>
+                  <p className="property__price-description">
+                    <strong>Gostou?</strong> Este lindo imóvel pode ser seu,
+                    pelo valor de
+                  </p>
+                  <p className="property__price-highlight">
+                    R${' '}
+                    {price.toLocaleString('pt-br', {
+                      minimumFractionDigits: 2,
+                    })}{' '}
+                    <spam className="property__price-condition">
+                      Confira as melhores condições*
+                    </spam>
+                  </p>
+                  <a href="https://keycash.io/" target="_blank">
+                    <small className="property__price-info">
+                      Veja como funciona o programa de crédito da{' '}
+                      <spam className="highlight">Keycash</spam>.
+                    </small>
+                  </a>
                 </section>
               </article>
               {/* <Footer /> */}

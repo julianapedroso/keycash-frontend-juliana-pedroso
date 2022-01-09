@@ -57,7 +57,7 @@ const Home = () => {
             } = property;
             return (
               <article className="home__main-item" key={id}>
-                <Link to={`/${id}`}>
+                <Link id="router__link"to={`/${id}`}>
                   <InfoCard
                     image={images}
                     address1={address.formattedAddress}
