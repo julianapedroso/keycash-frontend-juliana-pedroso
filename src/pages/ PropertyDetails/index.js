@@ -56,7 +56,7 @@ const PropertyDetails = () => {
           .map((image) => {
             return (
               <section className="property__images">
-                <Carousel autoPlayInterval={4000}>
+                <Carousel autoPlayInterval={4000} key={image.id}>
                   <img
                     className="property__cover"
                     src={image.images[0]}
@@ -107,7 +107,7 @@ const PropertyDetails = () => {
           .filter((list) => list.id === id)
           .map((list) => {
             const {
-              images,
+              id,
               address,
               usableArea,
               parkingSpaces,
@@ -116,9 +116,9 @@ const PropertyDetails = () => {
               price,
             } = list;
             return (
-              <main className="PropertyDetails" key={id}>
+              <main className="PropertyDetails">
                 <article className="property">
-                  <section className="property__info">
+                  <section className="property__info" key={id}>
                     <h5>{address.formattedAddress}</h5>
                     <p className="property__description">
                       Confira as informações deste imóvel e aproveite para

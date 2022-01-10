@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import './styles.scss';
 import { BASE_URL } from '../../providers/constants';
 // Components
-import { Header, Filter, InfoCard, Footer } from '../../components';
+import { Header, InfoCard, Footer } from '../../components';
 
 const Home = () => {
   const [properties, setProperties] = useState([]);
