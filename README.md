@@ -3,8 +3,16 @@
 <br />
 
 <h2 align='center'>
-<img src="https://keycash.io/_nuxt/img/keycash_logo_header.5b27804.svg" width="80%" margin="2rem" alt="Cover Rick and Morty"/>
+<img src="https://keycash.io/_nuxt/img/keycash_logo_header.5b27804.svg" width="40%" margin="2rem" alt="Logo Keycash"/>
 </h2>
+
+<h4 align='center'>
+👉 Status: Concluído ✅👏
+</h4>
+<hr />
+
+### ☁️ Deploy:
+https://keycash-showcase.herokuapp.com/
 
 ### ✨ Funcionamento:
 #### Telas
