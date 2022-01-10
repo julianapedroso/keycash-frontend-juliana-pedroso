@@ -64,10 +64,10 @@ yarn start
 ![ezgif com-gif-maker](https://user-images.githubusercontent.com/68782453/148715836-1cec9692-be48-4240-9db2-51bf8c05df3b.gif)
 
 #### Tablet
-![ezgif com-gif-maker (2)](https://user-images.githubusercontent.com/68782453/148716902-e70636cb-3aab-4eef-b7ac-7206c7d1ab2f.gif)
+![tablet](https://user-images.githubusercontent.com/68782453/148718801-274cc97f-49df-4152-8855-20512f4c8ece.gif)
 
 #### Desktop
-![ezgif com-gif-maker (1)](https://user-images.githubusercontent.com/68782453/148716564-c6377358-5728-43aa-9f52-ae61cb29f289.gif)
+![desktop](https://user-images.githubusercontent.com/68782453/148719376-776e6508-2418-4053-ae31-d03233070998.gif)
 
 ### Autora
 
