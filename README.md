@@ -49,7 +49,7 @@ As seguintes tecnologias foram usadas na construção do projeto:
 
 ```bash
 # Passo 1. Clone este repositório no terminal/cmd:
-$ git clone keycash-frontend-juliana-pedroso
+$ git clone https://github.com/julianapedroso/keycash-frontend-juliana-pedroso.git
 
 # Passo 2. Acesse a pasta do projeto:
 $ cd keycash-frontend-juliana-pedroso
