@@ -7,28 +7,49 @@ import { BASE_URL } from '../../providers/constants';
 import { Header, Filter, InfoCard, Footer } from '../../components';
 
 const Home = () => {
-  const [propertys, setPropertys] = useState([]);
+  const [properties, setProperties] = useState([]);
+  const [searchProperties, setSearchProperties] = useState('');
 
   useEffect(() => {
-    getPropertys();
+    getProperties();
   }, []);
 
-  const getPropertys = async () => {
+  const getProperties = async () => {
     await axios
       .get(`${BASE_URL}`)
       .then((res) => {
         const filtered = res.data.filter((item) => item.publish !== false);
         const sorted = filtered.sort((a, b) => a.price - b.price);
-        setPropertys(sorted);
+        setProperties(sorted);
       })
       .catch((err) => {
         console.log(err);
       });
   };
 
+  const handleInputValue = (e) => {
+    setSearchProperties(e.target.value);
+  };
+
+  const filteredProperty = () => {
+    return properties.filter((property) => {
+      const result = property.address.formattedAddress.toLowerCase();
+      return result.indexOf(searchProperties.toLocaleLowerCase()) > -1;
+    });
+  };
+
   return (
-    <>
+    <section className="Home">
       <Header />
+      <section className="home__search-address">
+        <input
+          className="home__input-address"
+          value={searchProperties}
+          onChange={handleInputValue}
+          type="text"
+          placeholder="Busque pelo endereço desejado..."
+        />
+      </section>
       <section className="Home">
         <h1 className="home__title">Imóveis disponíveis</h1>
         <p className="home__description">
@@ -41,10 +62,9 @@ const Home = () => {
         </p>
       </section>
 
-      <Filter />
       <main className="Home">
         <section className="home__main-content home__carousel">
-          {propertys.map((property) => {
+          {filteredProperty().map((property) => {
             const {
               id,
               images,
@@ -57,7 +77,7 @@ const Home = () => {
             } = property;
             return (
               <article className="home__main-item" key={id}>
-                <Link id="router__link"to={`/${id}`}>
+                <Link id="router__link" to={`/${id}`}>
                   <InfoCard
                     image={images}
                     address1={address.formattedAddress}
@@ -86,7 +106,7 @@ const Home = () => {
         </section>
       </main>
       <Footer />
-    </>
+    </section>
   );
 };
 
