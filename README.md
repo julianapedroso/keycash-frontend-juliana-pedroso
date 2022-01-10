@@ -1,70 +1,81 @@
-# Getting Started with Create React App
+# Keycash Code Challenge | Showcase 🏠
+#### Desafio proposto pela empresa Keycash para vaga de Desenvolvedor(a) Front-End.
+<br />
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<h2 align='center'>
+<img src="https://keycash.io/_nuxt/img/keycash_logo_header.5b27804.svg" width="80%" margin="2rem" alt="Cover Rick and Morty"/>
+</h2>
 
-## Available Scripts
+### ✨ Funcionamento:
+#### Telas
+##### Tela de vitrine de imóveis:
+- [x] Listagem dos imóveis em cards
+- [x] Filtro de busca por endereço
 
-In the project directory, you can run:
+##### Tela de detalhes do imóvel
+- [x] Mostrar as imagens do imóvel
+- [x] Mostrar detalhes do imóvel
 
-### `yarn start`
+#### Regras de negócio
+- [x] Um imóvel só poderá ser mostrado se o campo publish for ``true``
+- [x] Imóveis sem localização não deverão ser mostrados na lista
+- [x] A lista de imóveis deve começar a ser exibida do maior para o menor preço
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+#### Bonus
+- [x] Responsividade
+  - [x] Conceito ``mobile first``
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
 
-### `yarn test`
+### 💻 Tecnologias:
+As seguintes tecnologias foram usadas na construção do projeto:
+- [React.js](https://pt-br.reactjs.org/)
+- [Axios](https://www.npmjs.com/package/axios)
+- [React Router Dom](https://www.npmjs.com/package/react-router-dom)
+- [React Galery Carousel](https://www.npmjs.com/package/react-gallery-carousel)
+- [Figma - protótipo do projeto](https://www.figma.com/file/YlwahS8ZHfn9zFPQx1uC9x/Keycash?node-id=17%3A6)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### 🎨 Layout:
+- [Sass](https://www.npmjs.com/package/sass)
 
-### `yarn build`
+### 📂 Como instalar o projeto:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+```bash
+# Passo 1. Clone este repositório no terminal/cmd:
+$ git clone keycash-frontend-juliana-pedroso
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+# Passo 2. Acesse a pasta do projeto:
+$ cd keycash-frontend-juliana-pedroso
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+# Passo 3. Instale as dependências necessárias:
+$ npm install 
+or
+yarn
 
-### `yarn eject`
+# Passo 4. Execute a aplicação:
+$ npm run start
+or
+yarn start
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+# Passo 5. Abra: http://localhost:3000 no seu navegador para ver a aplicação ✨
+```
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### 🖼 Projeto:
+#### Mobile
+![ezgif com-gif-maker](https://user-images.githubusercontent.com/68782453/148715836-1cec9692-be48-4240-9db2-51bf8c05df3b.gif)
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+#### Tablet
+![ezgif com-gif-maker (2)](https://user-images.githubusercontent.com/68782453/148716902-e70636cb-3aab-4eef-b7ac-7206c7d1ab2f.gif)
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+#### Desktop
+![ezgif com-gif-maker (1)](https://user-images.githubusercontent.com/68782453/148716564-c6377358-5728-43aa-9f52-ae61cb29f289.gif)
 
-## Learn More
+### Autora
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+<table>
+  <tr>
+    </td>
+    <td align="center"><a href="https://www.linkedin.com/in/julianacristinapedroso/">
+    <img src="https://avatars.githubusercontent.com/u/68782453?v=4" width="100px" alt="Juliana's avatar"/>
+    <br />
+    <sub><b>Juliana Pedroso</b></sub></a> <a href="https://github.com/belatoledo">🌻</a></sub><br /></td>     
+</table>
