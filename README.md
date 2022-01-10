@@ -61,7 +61,7 @@ yarn start
 
 ### 🖼 Projeto:
 #### Mobile
-![ezgif com-gif-maker](https://user-images.githubusercontent.com/68782453/148715836-1cec9692-be48-4240-9db2-51bf8c05df3b.gif)
+![mobile](https://user-images.githubusercontent.com/68782453/148770413-5a65cb12-8067-4a1e-95ec-0e55c5ceee94.gif)
 
 #### Tablet
 ![tablet](https://user-images.githubusercontent.com/68782453/148718801-274cc97f-49df-4152-8855-20512f4c8ece.gif)
