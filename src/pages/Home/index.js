@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useMemo } from 'react';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
 import './styles.scss';
@@ -31,12 +31,12 @@ const Home = () => {
     setSearchProperties(e.target.value);
   };
 
-  const filteredProperty = () => {
+  const filteredProperty = useMemo(() => {
     return properties.filter((property) => {
       const result = property.address.formattedAddress.toLowerCase();
       return result.indexOf(searchProperties.toLocaleLowerCase()) > -1;
     });
-  };
+  }, [properties, searchProperties]);
 
   return (
     <section className="Home">
@@ -64,7 +64,12 @@ const Home = () => {
 
       <main className="Home">
         <section className="home__main-content home__carousel">
-          {filteredProperty().map((property) => {
+          {filteredProperty.length <= 0 && (
+            <>
+            <h3 className="home__search-faild">Sem resultado para pesquisa :(</h3>
+            </>
+          )}
+          {filteredProperty.map((property) => {
             const {
               id,
               images,

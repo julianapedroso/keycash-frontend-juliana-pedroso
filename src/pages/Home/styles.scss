@@ -24,6 +24,14 @@
     }
   }
 
+  .home__search-faild {
+    padding: 5% 1.4%;
+
+    @media (max-width: 320px), (max-width: 375px), (max-width: 768px) {
+      padding: 5%;
+    }
+  }
+
   #router__link {
     text-decoration: none;
     color: var(--color-secondary);
