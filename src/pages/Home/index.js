@@ -1,8 +1,8 @@
 import React, { useState, useEffect, useMemo } from 'react';
-import axios from 'axios';
 import { Link } from 'react-router-dom';
 import './styles.scss';
-import { BASE_URL } from '../../providers/constants';
+// API
+import api from '../../providers/api';
 // Components
 import { Header, InfoCard, Footer } from '../../components';
 
@@ -15,8 +15,8 @@ const Home = () => {
   }, []);
 
   const getProperties = async () => {
-    await axios
-      .get(`${BASE_URL}`)
+    await api
+      .get()
       .then((res) => {
         const filtered = res.data.filter((item) => item.publish !== false);
         const sorted = filtered.sort((a, b) => a.price - b.price);
@@ -66,7 +66,9 @@ const Home = () => {
         <section className="home__main-content home__carousel">
           {filteredProperty.length <= 0 && (
             <>
-            <h3 className="home__search-faild">Sem resultado para pesquisa :(</h3>
+              <h3 className="home__search-faild">
+                Sem resultado para pesquisa :(
+              </h3>
             </>
           )}
           {filteredProperty.map((property) => {
@@ -85,7 +87,7 @@ const Home = () => {
                 <Link id="router__link" to={`/${id}`}>
                   <InfoCard
                     image={images}
-                    address1={address.formattedAddress}
+                    address={address.formattedAddress}
                     area={usableArea}
                     bedroom={
                       bedrooms === 1

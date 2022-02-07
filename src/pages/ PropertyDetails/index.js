@@ -1,11 +1,13 @@
 import React, { useState, useEffect } from 'react';
-import axios from 'axios';
-import './styles.scss';
-import { BASE_URL } from '../../providers/constants';
 import { Link, useParams } from 'react-router-dom';
+import './styles.scss';
+// API
+import api from '../../providers/api';
 // Libs
 import 'react-gallery-carousel/dist/index.css';
 import Carousel from 'react-gallery-carousel';
+// Components
+import { Map } from '../../components';
 // Assets
 import IArrowBack from '../../assets/icons/arrow-back.svg';
 import IArea from '../../assets/icons/ruler.svg';
@@ -27,8 +29,8 @@ const PropertyDetails = () => {
   }, []);
 
   const getPropertyDetails = async () => {
-    await axios
-      .get(`${BASE_URL}`)
+    await api
+      .get()
       .then((res) => {
         setPropertyDetails(res.data);
       })
@@ -38,8 +40,8 @@ const PropertyDetails = () => {
   };
 
   const getImages = async () => {
-    await axios
-      .get(`${BASE_URL}`)
+    await api
+      .get()
       .then((res) => {
         setImages(res.data);
       })
@@ -175,6 +177,12 @@ const PropertyDetails = () => {
                     </a>
                   </section>
                 </article>
+                <section className="property__map">
+                  <Map
+                    lat={address.geolocation.lat}
+                    lng={address.geolocation.lng}
+                  />
+                </section>
               </main>
             );
           })}
