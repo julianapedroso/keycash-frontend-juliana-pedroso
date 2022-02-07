@@ -40,6 +40,7 @@ As seguintes tecnologias foram usadas na construção do projeto:
 - [Axios](https://www.npmjs.com/package/axios)
 - [React Router Dom](https://www.npmjs.com/package/react-router-dom)
 - [React Galery Carousel](https://www.npmjs.com/package/react-gallery-carousel)
+- [React Google Maps](https://www.npmjs.com/package/@react-google-maps/api)
 - [Figma - protótipo do projeto](https://www.figma.com/file/YlwahS8ZHfn9zFPQx1uC9x/Keycash?node-id=17%3A6)
 
 ### 🎨 Layout:
