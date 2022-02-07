@@ -3,16 +3,15 @@ import './styles.scss';
 import PropTypes from 'prop-types';
 
 const InfoCard = (props) => {
-  const {
-    title,
-    image,
-    address1,
-    address2,
-    area,
-    bedroom,
+  const { 
+    title, 
+    image, 
+    address, 
+    area, 
+    bedroom, 
     parking, 
-    bathroom,
-    price,
+    bathroom, 
+    price 
   } = props;
 
   return (
@@ -21,15 +20,16 @@ const InfoCard = (props) => {
         <img className="card__cover" src={image} alt="Property cover" />
         <section className="card__info">
           <span>{title}</span>
-          <h5>{address1}</h5>
-          <h6>{address2}</h6>
+          <h5>{address}</h5>
           <article className="card__scale">
             <p className="card__info-ruler">{area} m²</p>
             <p className="card__info-bed">{bedroom}</p>
             <p className="card__info-parking">{parking}</p>
             <p className="card__info-bathroom">{bathroom}</p>
           </article>
-          <h3 className="card__info-price">R$ {price.toLocaleString('pt-br', {minimumFractionDigits: 2})}</h3>
+          <h3 className="card__info-price">
+            R$ {price.toLocaleString('pt-br', { minimumFractionDigits: 2 })}
+          </h3>
         </section>
       </article>
     </main>
@@ -38,8 +38,7 @@ const InfoCard = (props) => {
 
 InfoCard.propTypes = {
   image: PropTypes.array,
-  addess1: PropTypes.string,
-  address2: PropTypes.string,
+  addess: PropTypes.string,
   area: PropTypes.number.isRequired,
   bedroom: PropTypes.string.isRequired,
   parking: PropTypes.string.isRequired,
