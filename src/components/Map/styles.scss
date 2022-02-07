@@ -1,0 +1,33 @@
+.Map {
+  height: 50vh;
+
+  h1 {
+    font-size: 1.1rem;
+    padding: 5%;
+
+    @media (min-width: 1800px) and (max-width: 1920px) {
+      font-size: 1.5rem;
+      padding: 1%;
+    }
+
+    @media (max-width: 1440px),
+    (max-width: 1024px) {
+      font-size: 1.5rem;
+      padding: 2%;
+    }
+
+    @media (max-width: 768px) {
+      font-size: 1.5rem;
+      padding: 3% 5%;
+    }
+
+    @media (max-width: 425px) {
+      font-size: 1.4rem;
+    }
+
+    @media (max-width: 375px),
+    (max-width: 320px) {
+      font-size: 1.1rem;
+    }
+  }
+}
