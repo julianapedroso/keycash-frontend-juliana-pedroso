@@ -2,7 +2,9 @@
   .property__cover {
     max-width: 100%;
 
-    @media (min-width: 1800px) and (max-width: 1920px), (max-width: 1440px), (max-width: 1024px) {
+    @media (min-width: 1800px) and (max-width: 1920px),
+    (max-width: 1440px),
+    (max-width: 1024px) {
       max-width: 50%;
     }
 
@@ -10,7 +12,9 @@
       max-width: 70%;
     }
 
-    @media (max-width: 425px), (max-width: 375px), (max-width: 320px) {
+    @media (max-width: 425px),
+    (max-width: 375px),
+    (max-width: 320px) {
       max-width: 100%;
     }
   }
@@ -22,14 +26,18 @@
     padding: 5%;
     position: absolute;
 
-    & .arrow__back {
+    .arrow__back {
       width: 150%;
 
-      @media (max-width: 1440px), (max-width: 1024px), (max-width: 768px) {
+      @media (max-width: 1440px),
+      (max-width: 1024px),
+      (max-width: 768px) {
         display: none;
       }
 
-      @media (max-width: 320px), (max-width: 375px), (max-width: 425px) {
+      @media (max-width: 320px),
+      (max-width: 375px),
+      (max-width: 425px) {
         display: block;
       }
     }
@@ -61,7 +69,10 @@
         margin-bottom: 2rem;
       }
 
-      @media (min-width: 1800px) and (max-width: 1920px), (max-width: 1440px), (max-width: 1024px), (max-width: 768px) {
+      @media (min-width: 1800px) and (max-width: 1920px),
+      (max-width: 1440px),
+      (max-width: 1024px),
+      (max-width: 768px) {
         font-size: 1.5rem;
       }
 
@@ -69,7 +80,8 @@
         font-size: 1.3rem;
       }
 
-      @media (max-width: 375px), (max-width: 320px) {
+      @media (max-width: 375px),
+      (max-width: 320px) {
         font-size: 1.1rem;
       }
     }
@@ -78,7 +90,10 @@
       font-size: 1rem;
       padding-bottom: 5%;
 
-      @media (min-width: 1800px) and (max-width: 1920px), (max-width: 1440px), (max-width: 1024px), (max-width: 768px) {
+      @media (min-width: 1800px) and (max-width: 1920px),
+      (max-width: 1440px),
+      (max-width: 1024px),
+      (max-width: 768px) {
         font-size: 1.2rem;
       }
 
@@ -105,13 +120,18 @@
     font-size: 1.2rem;
     padding-bottom: 10%;
 
-    @media (min-width: 1800px) and (max-width: 1920px), (max-width: 1440px), (max-width: 1024px) {
+    @media (min-width: 1800px) and (max-width: 1920px),
+    (max-width: 1440px),
+    (max-width: 1024px) {
       display: flex;
       justify-content: space-evenly;
       font-size: 1.2rem;
     }
 
-    @media (max-width: 320px), (max-width: 375px), (max-width: 425px), (max-width: 768px) {
+    @media (max-width: 320px),
+    (max-width: 375px),
+    (max-width: 425px),
+    (max-width: 768px) {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
       justify-content: center;
@@ -123,7 +143,8 @@
       font-size: 1.2rem;
     }
 
-    @media (max-width: 425px), (max-width: 375px) {
+    @media (max-width: 425px),
+    (max-width: 375px) {
       font-size: 1.1rem;
     }
 
@@ -137,18 +158,25 @@
     align-items: center;
     gap: 1rem;
 
-    @media (min-width: 1800px) and (max-width: 1920px), (max-width: 1440px), (max-width: 1024px) {
+    @media (min-width: 1800px) and (max-width: 1920px),
+    (max-width: 1440px),
+    (max-width: 1024px) {
       width: 18%;
     }
 
-    @media (max-width: 320px), (max-width: 375px), (max-width: 425px), (max-width: 768px) {
+    @media (max-width: 320px),
+    (max-width: 375px),
+    (max-width: 425px),
+    (max-width: 768px) {
       width: 100%;
     }
 
-    & img {
+    img {
       width: 15%;
 
-      @media (min-width: 1800px) and (max-width: 1920px), (max-width: 1440px), (max-width: 1024px) {
+      @media (min-width: 1800px) and (max-width: 1920px),
+      (max-width: 1440px),
+      (max-width: 1024px) {
         width: 20%;
       }
 
@@ -156,7 +184,8 @@
         width: 10%;
       }
 
-      @media (max-width: 375px), (max-width: 320px) {
+      @media (max-width: 375px),
+      (max-width: 320px) {
         width: 14%;
       }
     }
@@ -166,7 +195,10 @@
     font-size: 0.9rem;
     padding-bottom: 1%;
 
-    @media (min-width: 1800px) and (max-width: 1920px), (max-width: 1440px), (max-width: 1024px), (max-width: 768px) {
+    @media (min-width: 1800px) and (max-width: 1920px),
+    (max-width: 1440px),
+    (max-width: 1024px),
+    (max-width: 768px) {
       font-size: 1rem;
       padding-bottom: 1.5%;
     }
@@ -192,7 +224,9 @@
     font-weight: bold;
     padding-bottom: 8%;
 
-    @media (min-width: 1800px) and (max-width: 1920px), (max-width: 1440px), (max-width: 1024px) {
+    @media (min-width: 1800px) and (max-width: 1920px),
+    (max-width: 1440px),
+    (max-width: 1024px) {
       font-size: 2rem;
     }
 
@@ -210,13 +244,15 @@
     }
   }
 
-  & .property__price-condition {
+  .property__price-condition {
     color: var(--color-secondary);
     margin-bottom: 3%;
     font-size: 0.6rem;
     font-weight: normal;
 
-    @media (min-width: 1800px) and (max-width: 1920px), (max-width: 1440px), (max-width: 1024px) {
+    @media (min-width: 1800px) and (max-width: 1920px),
+    (max-width: 1440px),
+    (max-width: 1024px) {
       font-size: 0.9rem;
     }
 
@@ -236,18 +272,21 @@
   .property__price-info {
     padding-top: 5%;
 
-    & .highlight {
+    .highlight {
       color: var(--color-primary);
     }
   }
 
-  & a {
+  a {
     border-bottom: 1px solid var(--color-secondary);
     padding-bottom: 1px;
     color: var(--color-secondary);
     text-decoration: none;
 
-    @media (min-width: 1800px) and (max-width: 1920px), (max-width: 1440px), (max-width: 1024px), (max-width: 768px) {
+    @media (min-width: 1800px) and (max-width: 1920px),
+    (max-width: 1440px),
+    (max-width: 1024px),
+    (max-width: 768px) {
       font-size: 1.2rem;
     }
 
