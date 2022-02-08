@@ -10,7 +10,8 @@
     transform: scale(1.05);
   }
 
-  @media (min-width: 1800px) and (max-width: 1920px), (max-width: 1440px) {
+  @media (min-width: 1800px) and (max-width: 1920px),
+  (max-width: 1440px) {
     min-height: 100%;
     height: auto;
     font-size: 1.3rem;
@@ -43,16 +44,16 @@
   .card__info {
     padding: 4% 5%;
 
-    & span {
+    span {
       font-size: 0.8rem;
       font-weight: normal;
     }
 
-    & p {
+    p {
       font-size: 0.9rem;
     }
 
-    & > h6 {
+    &>h6 {
       font-size: 0.7rem;
       font-weight: normal;
     }
@@ -65,36 +66,41 @@
     justify-content: center;
     align-items: center;
 
-    & p {
-      @media (min-width: 1800px) and (max-width: 1920px), (max-width: 1440px) {
+    p {
+
+      @media (min-width: 1800px) and (max-width: 1920px),
+      (max-width: 1440px) {
         font-size: 1.1rem;
       }
 
-      @media (max-width: 1024px), (max-width: 768px), (max-width: 425px) {
+      @media (max-width: 1024px),
+      (max-width: 768px),
+      (max-width: 425px) {
         font-size: 1rem;
       }
 
-      @media (max-width: 320px), (max-width: 375px) {
+      @media (max-width: 320px),
+      (max-width: 375px) {
         font-size: 0.9rem;
       }
     }
 
-    & .card__info-ruler::before {
+    .card__info-ruler::before {
       content: url("../../assets/icons/ruler.svg");
       margin-right: 0.5rem;
     }
 
-    & .card__info-bed::before {
+    .card__info-bed::before {
       content: url("../../assets/icons/bed.svg");
       margin-right: 0.5rem;
     }
 
-    & .card__info-parking::before {
+    .card__info-parking::before {
       content: url("../../assets/icons/car.svg");
       margin-right: 0.5rem;
     }
 
-    & .card__info-bathroom::before {
+    .card__info-bathroom::before {
       content: url("../../assets/icons/bathroom.svg");
       margin-right: 0.5rem;
     }
@@ -106,16 +112,21 @@
     font-weight: bold;
     margin: 0.3rem 0;
 
-    @media (min-width: 1800px) and (max-width: 1920px), (max-width: 1440px) {
+    @media (min-width: 1800px) and (max-width: 1920px),
+    (max-width: 1440px) {
       padding-top: 2%;
       font-size: 1.2rem;
     }
 
-    @media (max-width: 1024px), (max-width: 768px), (min-width: 426px) and (max-width: 760px), (max-width: 425px) {
+    @media (max-width: 1024px),
+    (max-width: 768px),
+    (min-width: 426px) and (max-width: 760px),
+    (max-width: 425px) {
       font-size: 1.1rem;
     }
 
-    @media (max-width: 320px), (max-width: 375px) {
+    @media (max-width: 320px),
+    (max-width: 375px) {
       font-size: 1rem;
     }
   }
