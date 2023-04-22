@@ -12,7 +12,7 @@
 <hr />
 
 ### ☁️ Deploy:
-https://keycash-showcase.herokuapp.com/
+https://keycash-showcase.netlify.app/
 
 ### ✨ Funcionamento:
 #### Telas
