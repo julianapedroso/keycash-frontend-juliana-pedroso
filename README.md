@@ -3,7 +3,7 @@
 <br />
 
 <h2 align='center'>
-<img src="https://keycash.io/_nuxt/img/keycash_logo_header.5b27804.svg" width="40%" margin="2rem" alt="Logo Keycash"/>
+<img src="https://image4.owler.com/logo/keycash_owler_20200103_164552_original.png" width="20%" margin="2rem" alt="Logo Keycash"/>
 </h2>
 
 <h4 align='center'>
