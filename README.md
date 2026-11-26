@@ -86,5 +86,5 @@ yarn start
     <td align="center"><a href="https://www.linkedin.com/in/julianacristinapedroso/">
     <img src="https://avatars.githubusercontent.com/u/68782453?v=4" width="100px" alt="Juliana's avatar"/>
     <br />
-    <sub><b>Juliana Pedroso</b></sub></a> <a href="https://github.com/belatoledo">🌻</a></sub><br /></td>     
+    <sub><b>Juliana Pedroso</b></sub></a> <a href="[https://github.com/belatoledo](https://github.com/julianapedroso)">🌻</a></sub><br /></td>     
 </table>
